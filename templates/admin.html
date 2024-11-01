@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Stored Credentials</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        /* Container styling */
+        .container {
+            width: 350px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Credentials box styling */
+        .credentials-box {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f5;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        /* List styling for credential entries */
+        .credentials-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .credentials-box li {
+            padding: 5px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            color: #333;
+        }
+
+        /* Warning message styling */
+        .warning {
+            color: #ff0000;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Stored Credentials</h2>
+        <div class="credentials-box">
+            {% if contents %}
+                <ul>
+                    {% for line in contents %}
+                        <li>{{ line }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No credentials available.</p>
+            {% endif %}
+        </div>
+        <p class="warning">Warning: This data is sensitive and should be kept secure.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* Background styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        /* Main container */
+        .container {
+            width: 400px;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            text-align: center;
+            color: #333;
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: scale(1.03);
+        }
+
+        /* Header styling */
+        h2 {
+            color: #1e3c72;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        /* Credentials box styling */
+        .credentials-box {
+            background-color: #f7f9fc;
+            border: 2px solid #1e3c72;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #333;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .credentials-label {
+            color: #1e3c72;
+            font-weight: bold;
+        }
+
+        /* Warning message styling */
+        .warning-message {
+            margin-top: 25px;
+            font-size: 1em;
+            color: #d9534f;
+            background: #fbe7e7;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #d9534f;
+            box-shadow: 0 4px 8px rgba(217, 83, 79, 0.3);
+        }
+        .warning-message strong {
+            color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>You have been hacked!!!!</h2>
+        <p>Just kidding this is just a demo :)</p>
+        
+        <div class="credentials-box">
+            <div><span class="credentials-label">Username:</span> {{ username }} </div>
+            <div><span class="credentials-label">Password:</span> {{ password }} </div>
+        </div>
+
+        <div class="warning-message">
+            <p><strong>Warning:</strong> This is a demonstration of how dangerous fake websites can be. Fake websites can steal your personal information, including usernames, passwords, and financial details. Always ensure you’re on a trusted, secure site before entering sensitive information.</p>
+        </div>
+    </div>
+</body>
+</html>

